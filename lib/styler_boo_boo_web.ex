@@ -24,9 +24,9 @@ defmodule StylerBooBooWeb do
       use Phoenix.Router, helpers: false
 
       # Import common connection and controller functions to use in pipelines
-      import Plug.Conn
       import Phoenix.Controller
       import Phoenix.LiveView.Router
+      import Plug.Conn
     end
   end
 
@@ -74,8 +74,9 @@ defmodule StylerBooBooWeb do
         only: [get_csrf_token: 0, view_module: 1, view_template: 1]
 
       # Include general helpers for rendering HTML
-      unquote(html_helpers())
       import Surface
+
+      unquote(html_helpers())
     end
   end
 

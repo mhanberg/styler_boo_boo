@@ -20,14 +20,14 @@ defmodule StylerBooBooWeb.ConnCase do
   using do
     quote do
       # The default endpoint for testing
-      @endpoint StylerBooBooWeb.Endpoint
-
       use StylerBooBooWeb, :verified_routes
 
       # Import conveniences for testing with connections
-      import Plug.Conn
       import Phoenix.ConnTest
+      import Plug.Conn
       import StylerBooBooWeb.ConnCase
+
+      @endpoint StylerBooBooWeb.Endpoint
     end
   end
 

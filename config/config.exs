@@ -30,8 +30,7 @@ config :styler_boo_boo, StylerBooBoo.Mailer, adapter: Swoosh.Adapters.Local
 config :esbuild,
   version: "0.17.11",
   default: [
-    args:
-      ~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
+    args: ~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
     cd: Path.expand("../assets", __DIR__),
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
   ]

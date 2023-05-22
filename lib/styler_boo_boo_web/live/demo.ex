@@ -1,7 +1,12 @@
 defmodule StylerBooBooWeb.Demo do
+  @moduledoc false
   use StylerBooBooWeb, :surface_live_view
 
   alias StylerBooBooWeb.Components.Card
+
+  def mount(_, _, socket) do
+    {:ok, assign(socket, foo: %{bar: "hi greg"})}
+  end
 
   def render(assigns) do
     ~F"""
@@ -14,7 +19,7 @@ defmodule StylerBooBooWeb.Demo do
     <div class="flex justify-center mt-12">
       <Card max_width="lg" rounded>
         <:header>
-          Surface UI
+          Surface UI {@foo.bar}
         </:header>
 
         Start building rich interactive user-interfaces, writing minimal custom Javascript.
