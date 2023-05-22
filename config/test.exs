@@ -8,8 +8,7 @@ config :styler_boo_boo, StylerBooBooWeb.Endpoint,
   server: false
 
 # In test we don't send emails.
-config :styler_boo_boo, StylerBooBoo.Mailer,
-  adapter: Swoosh.Adapters.Test
+config :styler_boo_boo, StylerBooBoo.Mailer, adapter: Swoosh.Adapters.Test
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false

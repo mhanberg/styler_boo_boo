@@ -44,10 +44,11 @@ config :styler_boo_boo, StylerBooBooWeb.Endpoint,
 
 # Watch static and templates for browser reloading.
 config :styler_boo_boo, StylerBooBooWeb.Endpoint,
+  reloadable_compilers: [:gettext, :elixir, :app, :surface],
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
-      ~r"lib/styler_boo_boo_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/styler_boo_boo_web/(controllers|live|components)/.*(ex|heex|sface|js)$"
     ]
   ]
 
